@@ -12,12 +12,12 @@ O objetivo é simular a apresentação institucional da marca, permitindo a troc
 </p>
 
 <p align="center">
-  <img src="https://github.com/FernandoJesuss/starbucks/blob/main/img/Starbucksgif.gif" width="800">
+  <img src="https://github.com/FernandoJesuss/Nike/blob/main/img/sitenike.png" width="800">
 </p>
 
 ### 🖼 Screenshot
 <p align="center">
-  <img src="https://github.com/FernandoJesuss/starbucks/blob/main/img/mobile-site.png" width="300">
+  <img src="https://github.com/FernandoJesuss/Nike/blob/main/img/Smartphone.png" width="300">
 </p>
 
 
