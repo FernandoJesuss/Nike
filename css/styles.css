@@ -1,13 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     background: #ccee66;
-    color: white;
-    padding: 20px 160px;
-    height: 100vh;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
     font-family: "Noto Sans", sans-serif;
-    overflow: hidden;
-
+    display: flex;
+    flex-direction: column;
 }
 
 body::before {
@@ -15,10 +24,11 @@ body::before {
     background: #202020;
     position: absolute;
     top: 0;
-    left: -600px;
-    transform: rotate(-70deg);
+    left: -700px;
+    transform: rotate(-60deg);
     width: 100%;
     height: 120%;
+    z-index: 0;
 }
 
 body::after {
@@ -28,49 +38,72 @@ body::after {
     left: 50%;
     transform: translate(-50%, -50%);
     color: black;
-    font-size: 250px;
+    font-size: clamp(80px, 15vw, 250px);
     font-weight: bold;
     opacity: 0.5;
+    white-space: nowrap;
+    z-index: 0;
+
 }
 
 .logo {
-    width: 80px;
-
+    width: clamp(50px, 8vw, 80px);
+    z-index: 2;
+    position: relative;
 }
 
 h4 {
-    font-size: 30px;
+    font-size: clamp(18px, 3vw, 30px);
+    color: rgb(111, 112, 112);
 }
 
 h1 {
-    font-size: 80px;
+    font-size: clamp(36px, 8vw, 70px);
+    color: rgb(111, 112, 112);
 }
 
 p {
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
     margin-bottom: 40px;
+    color: rgb(102, 103, 103);
 }
 
 .botao-carrinho {
     background: #a3be52;
-    padding: 10px 20px;
+    padding: 20px 80px;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
     color: black;
+    font-weight: 500;
     cursor: pointer;
     transition: 0.5s;
+    z-index: 2;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 .botao-carrinho:hover {
-    opacity: 0.7;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 4px 20px white;
+    opacity: 0.95;
+}
 
+.botao-carrinho:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    opacity: 0.85;
 }
 
 .imagem-tenis {
-    width: 800px;
+    width: clamp(250px, 50vw, 800px);
     transform: rotate(-25deg);
     filter: drop-shadow(30px 45px 40px #161616);
     transition: 1s;
+    z-index: 2;
+    max-width: 100%;
+    position: relative;
+    top: 120px;
+    left: 175px;
 }
 
 .troca-efeito {
@@ -80,16 +113,18 @@ p {
 
 .caixa-principal {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    height: 75%;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
     position: relative;
     z-index: 1;
+    padding: 40px 20px;
 }
 
 .caixa-texto {
     max-width: 500px;
-
 }
 
 .caixa-botoes {
@@ -97,13 +132,17 @@ p {
     position: relative;
     display: flex;
     gap: 20px;
+    justify-content: center;
+    margin-top: 80px;
+    right: 580px;
 }
 
 .botoes {
-    width: 80px;
-    height: 80px;
+    width: clamp(50px, 10vw, 80px);
+    height: clamp(50px, 10vw, 80px);
     border-radius: 50%;
     cursor: pointer;
+
 }
 
 .botoes:active {
@@ -120,4 +159,80 @@ p {
 
 .rosa {
     background: #ff9eb5;
+}
+
+@media (min-width: 768px) {
+    .caixa-principal {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 40px 5vw;
+    }
+
+    .caixa-texto {
+        flex: 1;
+    }
+
+    .imagem-tenis {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        padding: 20px 8vw;
+    }
+}
+
+@media (max-width: 480px) {
+    body::before {
+        display: none;
+    }
+
+    body::after {
+        top: 55%;
+    }
+
+    .botao-carrinho {
+        padding: 15px 40px;
+        color: white;
+        background-color: #202020;
+    }
+
+    .imagem-tenis {
+        display: flex;
+        max-width: 220px;
+        transform: rotate(-15deg);
+        margin-top: 2%;
+        left: 0;
+        margin-left: 25%;
+        position: relative;
+        margin: 20px auto;
+    }
+
+    .caixa-botoes {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        bottom: 180px;
+        gap: 10px;
+        left: 320px;
+    }
+
+    .botoes {
+        width: 45px;
+        height: 45px;
+        border: 2px solid;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: clamp(50px, 8vw, 80px);
+        z-index: 2;
+        top: 20px;
+        position: relative;
+    }
 }
