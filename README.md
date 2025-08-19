@@ -8,7 +8,7 @@ O objetivo é simular a apresentação institucional da marca, permitindo a troc
 
 ### 🎥 Preview em GIF
 <p align="center">
-  <a href="https://fernandojesuss.github.io/Nike/"><b>Acesse o Site</b></a>
+  <a href="https://pjt-nike-clone.netlify.app/"><b>Acesse o Site</b></a>
 </p>
 
 <p align="center">
