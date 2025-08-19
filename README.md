@@ -11,14 +11,11 @@ O objetivo é simular a apresentação institucional da marca, permitindo a troc
   <a href="https://pjt-nike-clone.netlify.app/"><b>Acesse o Site</b></a>
 </p>
 
-<p align="center">
-  <img src="https://github.com/FernandoJesuss/Nike/blob/main/img/sitenike.png" width="800">
-</p>
 
-### 🖼 Screenshot
-<p align="center">
-  <img src="https://github.com/FernandoJesuss/Nike/blob/main/img/Smartphone.png" width="300">
-</p>
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="https://github.com/FernandoJesuss/Nike/blob/main/img/sitenike.png" width="400" height="300">
+  <img src="https://github.com/FernandoJesuss/Nike/blob/main/img/Smartphone.png" width="150" height="300">
+</div>
 
 
 ---
