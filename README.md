@@ -13,7 +13,7 @@ O objetivo é simular a apresentação institucional da marca, permitindo a troc
 
 
 <div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="https://github.com/FernandoJesuss/Nike-clone/blob/main/img/sitenike.png" width="400" height="300">
+  <img src="" width="400" height="300">
   <img src="https://github.com/FernandoJesuss/Nike/blob/main/img/Smartphone.png" width="150" height="300">
 </div>
 
